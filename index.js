@@ -76,8 +76,26 @@ function askQuestions() {
 function generateRead(answers) {
     return `
     Hello
+    # Welcome to ${answers.projectName}
+
+    ## Description
+
+    ## Table of Contents
     
-    ## Description`
+    ## Installation
+
+    ## Usage
+
+    ## License
+
+    ## Contributing
+
+    ## Tests
+
+    ## Questions
+    
+    ${answers.name}
+    `
 }
 
 askQuestions()

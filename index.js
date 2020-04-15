@@ -3,7 +3,7 @@ const axios = require("axios");
 const fs = require("fs");
 const util = require("util");
 
-// const generateMarkdown = require("./utils/generateMarkdown")
+const writeFileAsync = util.promisify(fs.writeFile)
 
 //create function to ask questions
 function askQuestions() {
@@ -24,6 +24,12 @@ function askQuestions() {
             type: "input",
             name: "projectName",
             message: "What is your project name?",
+        },
+
+        {
+            type: "input",
+            name: "github",
+            message: "What is your GitHub username?",
         },
 
         {
@@ -59,10 +65,30 @@ function askQuestions() {
         // console.log(projectURL) //giant mess. figure out why
 
         //create constant to have information for README
-    ])    } 
+    ]) ;
+   } 
 
 
 //call function to actually run
-askQuestions();
 
 
+
+function generateRead(answers) {
+    return `
+    Hello
+    
+    ## Description`
+}
+
+askQuestions()
+    .then(function(answers) {
+        const readme = generateRead(answers)
+
+        return writeFileAsync("README.md", readme)
+    })
+    .then(function() {
+        console.log("Successfully wrote to README.md");
+      })
+    .catch(function(err) {
+        console.log(err);
+      });;

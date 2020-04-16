@@ -57,21 +57,13 @@ function askQuestions() {
         },
     
 
-        //user axios to get information
-        // const projectURL = (user, title) => {
-        //     const kebabCaseTitle = title.toLowerCase().split(" ").join("-");
-        //     return ` https://github.com/${user}/${kebabCaseTitle}`
-
-        // console.log(projectURL) //giant mess. figure out why
-
-        //create constant to have information for README
     ]) ;
    } 
 
 
-//call function to actually run
 
 
+//create generate function to layout README
 
 function generateRead(answers) {
     return `
@@ -79,9 +71,10 @@ function generateRead(answers) {
     # Welcome to ${answers.projectName}
 
     ## Description
+    ${answers.bio}
 
     ## Table of Contents
-    
+
     ## Installation
 
     ## Usage
@@ -98,6 +91,7 @@ function generateRead(answers) {
     `
 }
 
+//call function to actually run
 askQuestions()
     .then(function(answers) {
         const readme = generateRead(answers)

@@ -38,6 +38,7 @@ function askQuestions() {
             message: "Tell me a short bio about the project",
         },
 
+        //ask about packages, if yes, how do you proceed. if No, how do you null out
         {
             type: "list",
             name: "install",
@@ -59,13 +60,33 @@ function askQuestions() {
                 "ISC License",
                 ]
         },
-
+        
+        //create User Story Section
         {
-            type: "input",
+            type: "list",
             name: "userStory",
-            message: "What is the user story?",
+            message: "The next three prompts will ask about your user story. Please use the following format. As a USER/ROLE I can CAPABILITY, so that BENEFIT. Do you understand? ",
+            choices: ["Yes"]
+                    
         },
-    
+
+         {
+            type: "input",
+            name: "user",
+            message: "Who is the user/What is the role?"
+         },
+
+         {
+            type: "input",
+            name: "capability",
+            message: "What does your application do?"
+         },
+
+         {
+            type: "input",
+            name: "benefit",
+            message: "Why is it beneficial?"
+         },
 
     ]) ;
    } 
@@ -92,6 +113,8 @@ function generateRead(answers) {
 
     ## Usage
 
+    As a ${answers.user}, I want to ${answers.capability}, so that ${answers.benefit}
+
     ## License
 
     ## Contributing
@@ -100,6 +123,7 @@ function generateRead(answers) {
 
     ## Questions
     
+    If you see any improvements that can be made, please email me at ${answers.email}. You can also visit my GitHub page at https://github.com/${answers.github}
     ${answers.name}
     `
 }

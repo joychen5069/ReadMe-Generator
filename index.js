@@ -39,15 +39,25 @@ function askQuestions() {
         },
 
         {
-            type: "input",
-            name: "instal",
+            type: "list",
+            name: "install",
             message: "Did you need any special packages?",
+            choices: [
+                "Yes",
+                "No"
+            ]
         },
 
         {
-            type: "input",
+            type: "checkbox",
             name: "license",
             message: "Does it have any special license?",
+            choices: [
+                "MIT License",
+                "Apache License 2.0",
+                "GNU GPLv3",
+                "ISC License",
+                ]
         },
 
         {
@@ -75,7 +85,10 @@ function generateRead(answers) {
 
     ## Table of Contents
 
+
     ## Installation
+
+    ${answers.install}
 
     ## Usage
 

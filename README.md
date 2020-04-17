@@ -1,12 +1,9 @@
-
-
-   
-# Welcome to 3 by 1
+# Welcome to Date NIght by Joy
 
     
 ## Description
     
-2
+This project gives you random recipes for meals or desserts along with a cocktail
 
     
 ## Table of Contents
@@ -15,7 +12,7 @@
 * [License](#license)
 * [Contributors](#contributing)
 * [Tests](#tests)
-* [Questions](questions)
+* [Questions](#questions)
 
     
 ## Installation
@@ -26,10 +23,10 @@
     
 ## Usage
 
-    As a 2, I want to 3, so that 2
+    As a relationship holder, I want to generate meals and cocktail, so that to eliminate uncertainty
 
 ## License
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)  [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) 
 
 ## Contributing
 
@@ -38,6 +35,6 @@ No Tests
 
 ## Questions
     
-If you see any improvements that can be made, please email me at 2. You can also visit my GitHub page at https://github.com/4
+If you see any improvements that can be made, please email me at joychen5069@gmail.com. You can also visit my GitHub page at https://github.com/joychen5069 or visit the Date NIght page at https://github.com/joychen5069/Date-Night
 
     

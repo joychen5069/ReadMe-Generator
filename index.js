@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const axios = require("axios");
+// const axios = require("axios");
 const fs = require("fs");
 const util = require("util");
 
@@ -22,14 +22,21 @@ function askQuestions() {
 
         {
             type: "input",
-            name: "projectName",
-            message: "What is your project name?",
+            name: "github",
+            message: "What is your GitHub username?",
         },
 
         {
             type: "input",
-            name: "github",
-            message: "What is your GitHub username?",
+            name: "projectName",
+            message: "What is your project name?",
+        },
+
+
+        {
+            type: "input",
+            name: "URL",
+            message: "What is URL to the project?"
         },
 
         {
@@ -38,6 +45,7 @@ function askQuestions() {
             message: "Tell me a short bio about the project",
         },
 
+        //Go to function getLicense if they have licenses
         {
             type: "checkbox",
             name: "license",
@@ -46,6 +54,7 @@ function askQuestions() {
                 "MIT License",
                 "Apache License 2.0",
                 "GNU GPLv3",
+                "Creative Commons License"
             ]
         },
 
@@ -55,7 +64,6 @@ function askQuestions() {
             name: "userStory",
             message: "The next three prompts will ask about your user story. Please use the following format. As a USER/ROLE I can CAPABILITY, so that BENEFIT. Do you understand? ",
             choices: ["Yes"]
-
         },
 
         {
@@ -76,15 +84,25 @@ function askQuestions() {
             message: "Why is it beneficial?"
         },
 
+        //Do you want to test?
         {
             type: "input",
             name: "test",
-            message: "Command to run test? (if you dont have any, skip)"
+            message: "Command to run test? (if you dont have any, press ENTER to skip)"
         },
+
+        //Ask about packages, then go to the AskQuestions function when its called 
         {
             type: "confirm",
             name: "packages",
             message: "Did you use any pacakges?"
+        },
+
+        //Ask about contributors
+        {
+            type: "input",
+            name: "contribute",
+            message: "List your contributors. (If none, press ENTER to skip)"
         }
 
     ]);
@@ -96,10 +114,7 @@ function askQuestions() {
 //create generate function to layout README
 
 function generateRead(answers) {
-    return `
-
-   
-# Welcome to ${answers.projectName} by ${answers.name}
+    return `# Welcome to ${answers.projectName} by ${answers.name}
 
     
 ## Description
@@ -136,7 +151,7 @@ ${getTest(answers.test)}
 
 ## Questions
     
-If you see any improvements that can be made, please email me at ${answers.email}. You can also visit my GitHub page at https://github.com/${answers.github}
+If you see any improvements that can be made, please email me at ${answers.email}. You can also visit my GitHub page at https://github.com/${answers.github} or visit the ${answers.projectName} page at ${answers.URL}
 
     `
 }
@@ -160,6 +175,8 @@ function getLicense(license) {
 
         } else if (license[i] === "GNU GPLv3") {
             results += "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) "
+        } else if (license[i] === "Creative Commons License") {"[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0) "
+            results +=
         }
 
     }

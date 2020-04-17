@@ -133,11 +133,11 @@ ${answers.bio}
     
 ## Installation
 
-   To use this application, ensure that you install the following package(s)
+   To use this application, run the following commands in your terminal to install the appropriate packagces
    * ${answers.installation}
 
     
-## Usage
+## User Story
 
     As a ${answers.user}, I want to ${answers.capability}, so that ${answers.benefit}
 
@@ -145,6 +145,7 @@ ${answers.bio}
 ${getLicense(answers.license)}
 
 ## Contributing
+${getContribute(answers.contribute)}
 
 ## Tests
 ${getTest(answers.test)}
@@ -175,8 +176,8 @@ function getLicense(license) {
 
         } else if (license[i] === "GNU GPLv3") {
             results += "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) "
-        } else if (license[i] === "Creative Commons License") {"[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0) "
-            results +=
+        } else if (license[i] === "Creative Commons License") {
+            results += "[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0) "
         }
 
     }
@@ -184,9 +185,14 @@ function getLicense(license) {
         results += "No Licenses Used"
     }
     return results
+}
 
-
-
+function getContribute(contribute) {
+    if(contribute) {
+        return `${contribute}`
+    } else {
+        return `This project has no other contributors.`
+    }
 }
 
 //call function to actually run

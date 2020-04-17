@@ -1,9 +1,9 @@
-# Welcome to Date NIght by Joy
+# Welcome to Date Night by Joy
 
     
 ## Description
     
-This project gives you random recipes for meals or desserts along with a cocktail
+It does things
 
     
 ## Table of Contents
@@ -21,20 +21,21 @@ This project gives you random recipes for meals or desserts along with a cocktai
    * inquirer
 
     
-## Usage
+## User Story
 
-    As a relationship holder, I want to generate meals and cocktail, so that to eliminate uncertainty
+    As a relationship partaker, I want to s, so that 1
 
 ## License
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)  [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) 
+[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0) 
 
 ## Contributing
+colin, travis, edrick
 
 ## Tests
 No Tests
 
 ## Questions
     
-If you see any improvements that can be made, please email me at joychen5069@gmail.com. You can also visit my GitHub page at https://github.com/joychen5069 or visit the Date NIght page at https://github.com/joychen5069/Date-Night
+If you see any improvements that can be made, please email me at joychen5069@gmail.com. You can also visit my GitHub page at https://github.com/joychen5069 or visit the Date Night page at https://github.com/joychen5069/Date-Night
 
     

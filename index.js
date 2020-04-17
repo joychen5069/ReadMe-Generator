@@ -91,6 +91,12 @@ function askQuestions() {
              type: "confirm",
              name: "packages",
              message: "Did you use any pacakges?"
+         },
+
+         {
+             type: "input",
+             name: "test",
+             message: "Command to run test? (if you dont have any, skip)"
          }
 
     ]) ;
@@ -133,12 +139,21 @@ ${getLicense(answers.license)}
 ## Contributing
 
 ## Tests
+${getTest(answers.test)}
 
 # Questions
     
     If you see any improvements that can be made, please email me at ${answers.email}. You can also visit my GitHub page at https://github.com/${answers.github}
     ${answers.name}
     `
+}
+
+function getTest(test) {
+    if (test) {
+        return `To test this application, use command ${test}`
+    } else {
+        return "No Tests"
+    }
 }
 
 function getLicense(license) {

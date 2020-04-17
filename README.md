@@ -29,6 +29,7 @@ No Licenses Used
 ## Contributing
 
 ## Tests
+To test this application, use command yes
 
 # Questions
     

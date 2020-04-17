@@ -145,17 +145,20 @@ function getLicense(license) {
     let results = ""
     for (let i = 0; i < license.length; i++) {
         if (license[i] === "MIT License") {
-            return "[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)"
+            results += "[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) "
         }
         else if (license[i] === "Apache License 2.0") {
-            return "[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)  "
+            results += "[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)  "
     
         } else if (license[i] === "GNU GPLv3") {
-            return "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)"
+            results += "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) "
         }  
         
     }
-
+    if (results === "") {
+        results += "No Licenses Used"
+    } 
+return results
 
     
 

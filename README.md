@@ -2,12 +2,12 @@
 
 Hello
     
-# Welcome to 3
+# Welcome to 
 
     
 ## Description
     
-5
+
 
     
 ## Table of Contents
@@ -21,10 +21,10 @@ Hello
     
 ## Usage
 
-    As a 1, I want to 2, so that 3
+    As a , I want to , so that 
 
 ## License
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+No Licenses Used
 
 ## Contributing
 
@@ -32,6 +32,6 @@ Hello
 
 # Questions
     
-    If you see any improvements that can be made, please email me at 2. You can also visit my GitHub page at https://github.com/4
-    1
+    If you see any improvements that can be made, please email me at . You can also visit my GitHub page at https://github.com/
+    
     

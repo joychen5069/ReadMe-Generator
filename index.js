@@ -39,15 +39,15 @@ function askQuestions() {
         },
 
         //ask about packages, if yes, how do you proceed. if No, how do you null out
-        {
-            type: "list",
-            name: "install",
-            message: "Did you need any special packages?",
-            choices: [
-                "Yes",
-                "No"
-            ]
-        },
+        // {
+        //     type: "list",
+        //     name: "install",
+        //     message: "Did you need any special packages?",
+        //     choices: [
+        //         "Yes",
+        //         "No"
+        //     ]
+        // },
 
         {
             type: "checkbox",
@@ -57,7 +57,6 @@ function askQuestions() {
                 "MIT License",
                 "Apache License 2.0",
                 "GNU GPLv3",
-                "ISC License",
                 ]
         },
         
@@ -88,52 +87,104 @@ function askQuestions() {
             message: "Why is it beneficial?"
          },
 
+         {
+             type: "confirm",
+             name: "packages",
+             message: "Did you use any pacakges?"
+         }
+
     ]) ;
    } 
 
-
+// console.log(answers)
 
 
 //create generate function to layout README
 
 function generateRead(answers) {
     return `
-    Hello
-    # Welcome to ${answers.projectName}
 
-    ## Description
-    ${answers.bio}
+Hello
+    
+# Welcome to ${answers.projectName}
 
-    ## Table of Contents
+    
+## Description
+    
+${answers.bio}
+
+    
+## Table of Contents
 
 
-    ## Installation
+    
+## Installation
 
     ${answers.install}
 
-    ## Usage
+    
+## Usage
 
     As a ${answers.user}, I want to ${answers.capability}, so that ${answers.benefit}
 
-    ## License
+## License
+${getLicense(answers.license)}
 
-    ## Contributing
+## Contributing
 
-    ## Tests
+## Tests
 
-    ## Questions
+# Questions
     
     If you see any improvements that can be made, please email me at ${answers.email}. You can also visit my GitHub page at https://github.com/${answers.github}
     ${answers.name}
     `
 }
 
+function getLicense(license) {
+    let results = ""
+    for (let i = 0; i < license.length; i++) {
+        if (license[i] === "MIT License") {
+            return "[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)"
+        }
+        else if (license[i] === "Apache License 2.0") {
+            return "[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)  "
+    
+        } else if (license[i] === "GNU GPLv3") {
+            return "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)"
+        }  
+        
+    }
+
+
+    
+
+}
+
 //call function to actually run
 askQuestions()
-    .then(function(answers) {
-        const readme = generateRead(answers)
+    .then(async function(answers) {
 
-        return writeFileAsync("README.md", readme)
+
+        console.log(answers)
+
+        if (answers.packages === true) {
+            await inquirer.prompt([ {
+
+                type: "input",
+                name: "installation",
+                message: "What packages did you use?"
+
+            }]).then(results => {
+                const answersObj = {...answers, ...results}
+                const readme = generateRead(answersObj)
+                return writeFileAsync("README.md", readme)
+            })
+        }else{
+            const readme = generateRead(answers)
+            return writeFileAsync("README.md", readme)
+        }
+
     })
     .then(function() {
         console.log("Successfully wrote to README.md");

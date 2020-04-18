@@ -32,6 +32,25 @@ function askQuestions() {
             message: "What is your project name?",
         },
 
+        //ask what they powered the application with
+        {
+            type: "checkbox",
+            name: "code",
+            message: "What is the application powered by?",
+            choices: [
+                "JavaScript",
+                "Java",
+                "Go",
+                "Python",
+                "C",
+                "C+",
+                "Ruby",
+                "Lua",
+                "Swift",
+                "Kotlin"
+
+            ]
+        },
 
         {
             type: "input",

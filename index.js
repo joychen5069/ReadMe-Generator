@@ -146,7 +146,7 @@ As a ${answers.user}, I want to ${answers.capability}, so that ${answers.benefit
 
 To use this application, run the following commands in your terminal to install the appropriate packages
 
-${answers.installation}
+* ${answers.installation}
 
 ## Usage 
 

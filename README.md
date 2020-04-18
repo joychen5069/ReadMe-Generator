@@ -3,7 +3,11 @@
     
 ## Description
     
-It does things
+It gives you random things
+
+## User Story
+
+As a 1, I want to 2, so that 3
 
     
 ## Table of Contents
@@ -17,19 +21,20 @@ It does things
     
 ## Installation
 
-   To use this application, ensure that you install the following package(s)
-   * inquirer
+To use this application, run the following commands in your terminal to install the appropriate packages
 
-    
-## User Story
+inquirer
 
-    As a relationship partaker, I want to s, so that 1
+## Usage 
+
+After you've installed the packages, You run the application in the terminal by running node index.js
+
 
 ## License
-[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0) 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) 
 
 ## Contributing
-colin, travis, edrick
+This project has no other contributors.
 
 ## Tests
 No Tests

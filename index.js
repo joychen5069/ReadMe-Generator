@@ -36,7 +36,7 @@ function askQuestions() {
         {
             type: "input",
             name: "URL",
-            message: "What is URL to the project?"
+            message: "What is URL to the GitHub repository?"
         },
 
         {
@@ -84,6 +84,13 @@ function askQuestions() {
             message: "Why is it beneficial?"
         },
 
+        //how does the user use the application
+        {
+            type: "input",
+            name: "usage",
+            message: "How does the user run the application? (Do they run it in a terminal? Are there certain steps they have to follow?)"
+        },
+
         //Do you want to test?
         {
             type: "input",
@@ -121,6 +128,10 @@ function generateRead(answers) {
     
 ${answers.bio}
 
+## User Story
+
+As a ${answers.user}, I want to ${answers.capability}, so that ${answers.benefit}
+
     
 ## Table of Contents
 * [Installation](#installation)
@@ -133,13 +144,14 @@ ${answers.bio}
     
 ## Installation
 
-   To use this application, run the following commands in your terminal to install the appropriate packagces
-   * ${answers.installation}
+To use this application, run the following commands in your terminal to install the appropriate packages
 
-    
-## User Story
+${answers.installation}
 
-    As a ${answers.user}, I want to ${answers.capability}, so that ${answers.benefit}
+## Usage 
+
+After you've installed the packages, ${answers.usage}
+
 
 ## License
 ${getLicense(answers.license)}
@@ -215,7 +227,8 @@ askQuestions()
                 return writeFileAsync("README.md", readme)
             })
         } else {
-            const readme = generateRead(answers)
+            const answersNo = { ...answers, ...results}
+            const readme = generateRead(answersNo)
             return writeFileAsync("README.md", readme)
         }
 

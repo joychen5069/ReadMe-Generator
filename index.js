@@ -142,6 +142,7 @@ function askQuestions() {
 function generateRead(answers) {
     return `# Welcome to ${answers.projectName} by ${answers.name}
 
+${getCode(answers.code)}
     
 ## Description
     
@@ -188,6 +189,7 @@ If you see any improvements that can be made, please email me at ${answers.email
     `
 }
 
+//check to see if the user has a test command
 function getTest(test) {
     if (test) {
         return `To test this application, use command ${test}`
@@ -196,6 +198,7 @@ function getTest(test) {
     }
 }
 
+//write code to add badges for licenses
 function getLicense(license) {
     let results = ""
     for (let i = 0; i < license.length; i++) {
@@ -218,6 +221,47 @@ function getLicense(license) {
     return results
 }
 
+//create function to write badges for coding language
+function getCode(code) {
+    let language = ""
+    for (let i = 0; i < code.length; i++) {
+        if (code[i] === "JavaScript") {
+            language += "[![JavScript](https://img.shields.io/badge/Made%20With-JavaScript-blue.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Java") {
+            language += "[![Java](https://img.shields.io/badge/Made%20With-Java-green.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Go") {
+            language += "[![Go](https://img.shields.io/badge/Made%20With-Go-ff69b4.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Python") {
+            language += "[![Python](https://img.shields.io/badge/Made%20With-Python-yellow.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "C") {
+            language += "[![C](https://img.shields.io/badge/Made%20With-C-blueviolet.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "C+") {
+            language += "[![C+](https://img.shields.io/badge/Made%20With-C+-yellowgreen.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Ruby") {
+            language += "[![Ruby](https://img.shields.io/badge/Made%20With-Ruby-red.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Lua") {
+            language += "[![Lua](https://img.shields.io/badge/Made%20With-Lua-blue.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Swift") {
+            language += "[![Swift](https://img.shields.io/badge/Made%20With-Swift-green.svg)](https://shields.io/)  "
+        }
+        else if (code[i] === "Kotlin") {
+            language += "[![Kotlin](https://img.shields.io/badge/Made%20With-Kotlin-red.svg)](https://shields.io/)  "
+        }
+
+        
+    }
+    return language
+}
+
+//create function to add contributors if there are any
 function getContribute(contribute) {
     if(contribute) {
         return `${contribute}`
@@ -245,9 +289,9 @@ askQuestions()
                 const readme = generateRead(answersObj)
                 return writeFileAsync("README.md", readme)
             })
-        } else {
-            const answersNo = { ...answers, ...results}
-            const readme = generateRead(answersNo)
+        }
+        else {
+            const readme = generateRead(answers)
             return writeFileAsync("README.md", readme)
         }
 

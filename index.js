@@ -121,7 +121,7 @@ function askQuestions() {
         {
             type: "confirm",
             name: "packages",
-            message: "Did you use any pacakges?"
+            message: "Did you use any packages?"
         },
 
         //Ask about contributors
@@ -137,7 +137,6 @@ function askQuestions() {
 // console.log(answers)
 askQuestions()
     .then(async function (answers) {
-
 
         console.log(answers)
 
@@ -155,6 +154,7 @@ askQuestions()
             })
         }
         else {
+            answers.installation = ""
             const readme = generateRead(answers)
             return writeFileAsync("README.md", readme)
         }

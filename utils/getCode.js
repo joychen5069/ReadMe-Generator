@@ -1,8 +1,3 @@
-
-
-
-
-
 //create function to write badges for coding language
 function getCode(code) {
     let language = ""

@@ -1,5 +1,6 @@
 const getTest = require("./getTest")
 const getLicense = require("./getLicense")
+const getContribute = require("./getContribute")
 //create generate function to layout README
 
 function generateRead(answers) {
@@ -96,16 +97,6 @@ function getCode(code) {
   return language
 }
 
-//create function to add contributors if there are any
-function getContribute(contribute) {
-  if (contribute) {
-    return `${contribute}`
-  } else {
-    return `This project has no other contributors.`
-  }
-}
 
-//call function to actually run
-
-
+//Export out so that index.js can read the file
 module.exports = generateRead;

@@ -1,4 +1,4 @@
-
+const getTest = require("./getTest")
 //create generate function to layout README
 
 function generateRead(answers) {
@@ -52,16 +52,6 @@ If you see any improvements that can be made, please email me at ${answers.email
 }
 
 
-
-
-//check to see if the user has a test command
-function getTest(test) {
-  if (test) {
-    return `To test this application, use command ${test}`
-  } else {
-    return "No Tests"
-  }
-}
 
 //write code to add badges for licenses
 function getLicense(license) {

@@ -1,14 +1,14 @@
-# Welcome to 2 by 1
+# Welcome to hi by joy
 
-[![JavScript](https://img.shields.io/badge/Made%20With-JavaScript-blue.svg)](https://shields.io/)  
+[![JavScript](https://img.shields.io/badge/Made%20With-JavaScript-blue.svg)](https://shields.io/)  [![Java](https://img.shields.io/badge/Made%20With-Java-green.svg)](https://shields.io/)  
   
 ## Description
   
-d
+s
 
 ## User Story
 
-As a , I want to , so that s
+As a , I want to , so that 
 
   
 ## Table of Contents
@@ -28,7 +28,7 @@ To use this application, run the following commands in your terminal to install 
 
 ## Usage 
 
-After you've installed the packages, d
+After you've installed the packages, 
 
 
 ## License
@@ -42,6 +42,6 @@ No Tests
 
 ## Questions
   
-If you see any improvements that can be made, please email me at 1. You can also visit my GitHub page at https://github.com/1 or visit the 2 page at f
+If you see any improvements that can be made, please email me at joy. You can also visit my GitHub page at https://github.com/joy or visit the hi page at s
 
   

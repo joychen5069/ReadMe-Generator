@@ -1,22 +1,21 @@
-# Welcome to d by joy
+# Welcome to The ReadMe Generator
 
-[![JavScript](https://img.shields.io/badge/Made%20With-JavaScript-blue.svg)](https://shields.io/)  [![Java](https://img.shields.io/badge/Made%20With-Java-green.svg)](https://shields.io/)  [![Go](https://img.shields.io/badge/Made%20With-Go-ff69b4.svg)](https://shields.io/)  [![Python](https://img.shields.io/badge/Made%20With-Python-yellow.svg)](https://shields.io/)  [![C](https://img.shields.io/badge/Made%20With-C-blueviolet.svg)](https://shields.io/)  [![C+](https://img.shields.io/badge/Made%20With-C+-yellowgreen.svg)](https://shields.io/)  [![Ruby](https://img.shields.io/badge/Made%20With-Ruby-red.svg)](https://shields.io/)  [![Lua](https://img.shields.io/badge/Made%20With-Lua-blue.svg)](https://shields.io/)  [![Swift](https://img.shields.io/badge/Made%20With-Swift-green.svg)](https://shields.io/)  [![Kotlin](https://img.shields.io/badge/Made%20With-Kotlin-red.svg)](https://shields.io/)  
+[![JavScript](https://img.shields.io/badge/Made%20With-JavaScript-blue.svg)](https://shields.io/)  
   
 ## Description
   
-
+This application, powered by JavaScript and Node.js, will produce a usable README.md file for other programmers to use. Having a basic outline for a Markdown is extremely helpful.
 
 ## User Story
 
-As a , I want to , so that 
+As a software developter, I want to generate ReadMe files, so that I can provide other users an overview of my work. 
 
   
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributors](#contributing)
-* [Tests](#tests)
+* [Demo](#demo)
 * [Questions](#questions)
 
   
@@ -24,24 +23,23 @@ As a , I want to , so that
 
 To use this application, run the following commands in your terminal to install the appropriate packages
 
-* 
+    npm i inquirer
 
 ## Usage 
 
-After you've installed the packages, 
+After you've installed the packages, The user opens up their terminal and runs the command
+   
+    node index.js
 
 
 ## License
-No Licenses Used
+[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0) 
 
-## Contributing
-This project has no other contributors.
-
-## Tests
-No Tests
+## Demo
+![Demo](assets/ReadMe-Demo.gif)
 
 ## Questions
   
-If you see any improvements that can be made, please email me at jojy. You can also visit my GitHub page at https://github.com/s or visit the d page at 
+If you see any improvements that can be made, please email me at joychen5069@gmail.com. You can also visit my GitHub page at https://github.com/joychen5069 or visit the Date Night page at https://github.com/joychen5069/ReadMe-Generator
 
   

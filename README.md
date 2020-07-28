@@ -40,6 +40,6 @@ After you've installed the packages, The user opens up their terminal and runs t
 
 ## Questions
   
-If you see any improvements that can be made, please email me at joychen5069@gmail.com. You can also visit my GitHub page at https://github.com/joychen5069 or visit the Date Night page at https://github.com/joychen5069/ReadMe-Generator
+If you see any improvements that can be made, please email me at joychen5069@gmail.com. You can also visit my GitHub page at https://github.com/joychen5069 or visit the gitHub page at https://github.com/joychen5069/ReadMe-Generator
 
   
